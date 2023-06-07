@@ -4,7 +4,7 @@ import os
 import requests
 
 url = "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=df45f55e19b54b649ff36bf2178e407f"
-api_key = "df45f55e19b54b649ff36bf2178e407f"
+api_key = os.getenv("news_api")
 
 r = requests.get(url)
 content = r.json()
